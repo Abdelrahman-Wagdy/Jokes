@@ -1,0 +1,52 @@
+body{
+    background-color: light-dark(white, black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    margin:0px;
+    padding: 0px;
+}
+
+.container{
+    width: 80%;
+    background-color: light-dark(black, white);
+    color: light-dark(white, black);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 2px light-dark(rgba(255, 255, 255, 0.2),rgba(0, 0, 0, 0.3));
+}
+.joke{
+    margin: 25px 0px;
+    border-right: 2px solid;
+    animation: blink 0.75s step-end infinite;
+}
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+.joke-button{
+    margin-bottom: 20px;
+    width: 200px;
+    cursor: pointer;
+    background-color: light-dark(white, black);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-color: light-dark(white,black);
+    transform: translateX(-10px);
+    box-shadow: 8px 8px 4px light-dark(rgba(255, 255, 255, 0.2),rgba(0, 0, 0, 0.3));
+    transition: all 0.3s linear;
+}
+.joke-button:hover{
+    transform: translateX(0);
+    box-shadow: none;   
+}
