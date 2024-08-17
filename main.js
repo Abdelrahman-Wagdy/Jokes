@@ -6,10 +6,10 @@ function sleep(ms) {
 }
 
 async function writeText(text) {
-    jokeText.innerText = ''; // Clear the existing text
+    jokeText.innerText = '';
     for (let i = 0; i < text.length; i++) {
         jokeText.textContent += text[i];
-        await sleep(70); // Wait for 100ms before adding the next letter
+        await sleep(70);
     }
 }
 
@@ -17,7 +17,7 @@ writeText("Want to read a joke? Click the button");
 
 async function getJoke(){
     const apiURI = "https://api.api-ninjas.com/v1/jokes"
-    const apiKey = "pXSwouzzFTIogDWoTvIs3w==sxWj5Xy0s19gReMd"
+    const apiKey = "Add your API KEY"
     const options = {
         method: 'GET',
         headers: {
